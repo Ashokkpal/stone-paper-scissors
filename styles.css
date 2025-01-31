@@ -5,7 +5,6 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -14,8 +13,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    width: 90%; /* Adjusted width for smaller screens */
-    max-width: 600px; /* Max width to prevent it from being too wide on large screens */
+    width: 80%;
+    max-width: 600px; /* Ensure container doesn't get too wide */
     box-sizing: border-box;
 }
 
@@ -50,7 +49,7 @@ a:hover {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+    flex-wrap: wrap; /* Ensure buttons stack on mobile */
 }
 
 button {
@@ -62,11 +61,11 @@ button {
     padding: 10px;
     text-align: center;
     transition: transform 0.2s, background 0.3s;
-    width: 120px; /* Set a fixed width for buttons */
+    width: 120px; /* Default width for buttons */
 }
 
 button img {
-    width: 100%; /* Ensure the image scales within the button */
+    width: 100%; /* Ensure images scale within buttons */
     height: auto;
 }
 
@@ -98,48 +97,60 @@ footer {
     color: #ccc;
 }
 
+/* Mobile (less than 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5em; /* Adjusted font size for smaller screens */
+        font-size: 1.5em;
     }
 
     .container {
-        width: 95%; /* Make the container wider on mobile */
+        width: 95%; /* Container takes more width on mobile */
         padding: 15px;
     }
 
     button {
-        width: 100px; /* Make buttons slightly smaller on mobile */
+        width: 100px; /* Adjust width for smaller screens */
+    }
+
+    button img {
+        width: 80px; /* Smaller images for mobile */
+        height: 80px;
     }
 
     .choices {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: column; /* Stack buttons vertically */
     }
 
     #result {
-        font-size: 18px; /* Smaller text for result on mobile */
+        font-size: 18px;
     }
 
     #score {
-        font-size: 16px; /* Adjusted score text size for mobile */
+        font-size: 16px;
     }
 }
 
+/* Very small screens (less than 480px) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.3em; /* Even smaller font for very small screens */
+        font-size: 1.3em;
     }
 
     .profile-pic {
-        width: 80px; /* Slightly smaller profile picture */
+        width: 80px; /* Smaller profile picture */
         height: 80px;
     }
 
     button {
-        width: 80px; /* Smaller buttons for smaller screens */
+        width: 80px; /* Even smaller buttons for very small screens */
+    }
+
+    button img {
+        width: 60px; /* Smaller images for very small screens */
+        height: 60px;
     }
 
     #result {
-        font-size: 16px; /* Adjust result size for smaller screens */
+        font-size: 16px;
     }
 }
