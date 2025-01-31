@@ -1,36 +1,47 @@
-let playerScore = 0;
-let computerScore = 0;
-
-function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissors'];
-    return choices[Math.floor(Math.random() * choices.length)];
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
-function determineWinner(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
-        return "It's a tie!";
-    } else if (
-        (userChoice === 'rock' && computerChoice === 'scissors') ||
-        (userChoice === 'paper' && computerChoice === 'rock') ||
-        (userChoice === 'scissors' && computerChoice === 'paper')
-    ) {
-        playerScore++;
-        return "You win!";
-    } else {
-        computerScore++;
-        return "Computer wins!";
-    }
+.container {
+    margin-top: 50px;
 }
 
-function play(userChoice) {
-    const computerChoice = getComputerChoice();
-    const result = determineWinner(userChoice, computerChoice);
-    
-    const resultElement = document.getElementById('result');
-    resultElement.innerText = `You chose: ${userChoice}, Computer chose: ${computerChoice}. ${result}`;
-    
-    // Animate result display
-    resultElement.style.opacity = 0; // Start with hidden
-    setTimeout(() => {
-        resultElement.style.opacity = 1; // Fade in
-   
+h1 {
+    color: #333;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover img {
+    transform: scale(1.1);
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#score {
+    font-size: 18px;
+    margin-top: 10px;
+}
