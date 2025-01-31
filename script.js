@@ -1,72 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
+let playerScore = 0;
+let computerScore = 0;
 
-.game-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-}
+function playGame(playerChoice) {
+    const choices = ["rock", "paper", "scissors"];
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
 
-h1 {
-    color: #333;
-}
+    let result = "";
+    if (playerChoice === computerChoice) {
+        result = "It's a tie!";
+    } else if (
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+        result = "You win!";
+        playerScore++;
+    } else {
+        result = "Computer wins!";
+        computerScore++;
+    }
 
-.choices {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.1s;
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-button img {
-    width: 80px;
-    height: 80px;
-    transition: transform 0.2s;
-}
-
-button:hover img {
-    transform: scale(1.1);
-}
-
-.scoreboard {
-    margin: 20px 0;
-}
-
-#result {
-    font-size: 1.5em;
-    margin: 20px 0;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-#resetButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#resetButton:hover {
-    background-color: #0056b3;
+    document.getElementById("result").innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;
+    document.getElementById("score").innerText = `Player: ${playerScore} | Computer: ${computerScore}`;
 }
