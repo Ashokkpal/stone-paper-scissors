@@ -1,11 +1,7 @@
-Here’s a **creative and visually engaging** `README.md` format with emojis, sections, and markdown styling to make it **stand out**! 🚀🎮  
-
----
-
 ## ✨ **Rock-Paper-Scissors Game** 🪨📄✂️  
 _A fun, interactive game built with HTML, CSS, and JavaScript! Play against the computer and test your luck!_  
 
-![Game Preview](https://upload.wikimedia.org/wikipedia/commons/8/89/Rock-paper-scissors.svg)  
+![Game Preview](https://images.app.goo.gl/ZsSCYcii5YkfH9aE9)
 
 ---
 
