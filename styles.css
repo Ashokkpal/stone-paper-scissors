@@ -5,6 +5,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -13,7 +14,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    width: 80%;
+    width: 90%; /* Adjusted width for smaller screens */
+    max-width: 600px; /* Max width to prevent it from being too wide on large screens */
+    box-sizing: border-box;
 }
 
 .profile-pic {
@@ -26,6 +29,7 @@ body {
 
 h1 {
     color: #ffeb3b;
+    font-size: 2em;
 }
 
 h2 {
@@ -46,6 +50,7 @@ a:hover {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 button {
@@ -57,11 +62,12 @@ button {
     padding: 10px;
     text-align: center;
     transition: transform 0.2s, background 0.3s;
+    width: 120px; /* Set a fixed width for buttons */
 }
 
 button img {
-    width: 120px;
-    height: 120px;
+    width: 100%; /* Ensure the image scales within the button */
+    height: auto;
 }
 
 button p {
@@ -90,4 +96,50 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #ccc;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    .container {
+        width: 95%; /* Make the container wider on mobile */
+        padding: 15px;
+    }
+
+    button {
+        width: 100px; /* Make buttons slightly smaller on mobile */
+    }
+
+    .choices {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+    }
+
+    #result {
+        font-size: 18px; /* Smaller text for result on mobile */
+    }
+
+    #score {
+        font-size: 16px; /* Adjusted score text size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em; /* Even smaller font for very small screens */
+    }
+
+    .profile-pic {
+        width: 80px; /* Slightly smaller profile picture */
+        height: 80px;
+    }
+
+    button {
+        width: 80px; /* Smaller buttons for smaller screens */
+    }
+
+    #result {
+        font-size: 16px; /* Adjust result size for smaller screens */
+    }
 }
