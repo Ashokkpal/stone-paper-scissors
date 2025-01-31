@@ -12,6 +12,10 @@ h1 {
     color: #333;
 }
 
+h2 {
+    color: #007bff;
+}
+
 .choices {
     display: flex;
     justify-content: center;
