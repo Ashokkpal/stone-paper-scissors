@@ -14,8 +14,6 @@ body {
     border-radius: 10px;
     display: inline-block;
     width: 80%;
-    max-width: 600px; /* Ensure container doesn't get too wide */
-    box-sizing: border-box;
 }
 
 .profile-pic {
@@ -28,7 +26,6 @@ body {
 
 h1 {
     color: #ffeb3b;
-    font-size: 2em;
 }
 
 h2 {
@@ -49,8 +46,10 @@ a:hover {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap; /* Allows wrapping of buttons if space is tight */
 }
 
+/* For buttons on mobile */
 button {
     background: none;
     border: 2px solid white;
@@ -60,12 +59,32 @@ button {
     padding: 10px;
     text-align: center;
     transition: transform 0.2s, background 0.3s;
-    width: 120px; /* Default width for buttons */
+}
+
+/* To ensure buttons display as a row on mobile */
+@media (max-width: 768px) {
+    .choices {
+        justify-content: space-between; /* Align buttons in a row with space between them */
+    }
+
+    button {
+        width: 30%; /* Set a width to make sure buttons stay in one row */
+        padding: 15px; /* Increase padding for easier clicking on mobile */
+    }
+
+    button img {
+        width: 80px; /* Adjust image size for mobile */
+        height: 80px; /* Adjust image size for mobile */
+    }
+
+    button p {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
 }
 
 button img {
-    width: 100%; /* Ensure images scale within buttons */
-    height: auto;
+    width: 120px;
+    height: 120px;
 }
 
 button p {
@@ -94,64 +113,4 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #ccc;
-}
-
-/* Mobile (less than 768px) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .container {
-        width: 95%; /* Container takes more width on mobile */
-        padding: 15px;
-    }
-
-    button {
-        width: 80px; /* Adjust width for smaller screens */
-    }
-
-    button img {
-        width: 60px; /* Smaller images for mobile */
-        height: 60px;
-    }
-
-    .choices {
-        flex-direction: row; /* Keep buttons in one row */
-        overflow-x: auto; /* Allow horizontal scrolling if necessary */
-        justify-content: space-evenly; /* Distribute buttons evenly */
-    }
-
-    #result {
-        font-size: 18px;
-    }
-
-    #score {
-        font-size: 16px;
-    }
-}
-
-/* Very small screens (less than 480px) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.3em;
-    }
-
-    .profile-pic {
-        width: 80px; /* Smaller profile picture */
-        height: 80px;
-    }
-
-    button {
-        width: 70px; /* Even smaller buttons for very small screens */
-    }
-
-    button img {
-        width: 50px; /* Smaller images for very small screens */
-        height: 50px;
-    }
-
-    #result {
-        font-size: 16px;
-    }
 }
