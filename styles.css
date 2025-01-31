@@ -1,19 +1,34 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: white;
 }
 
 .container {
     margin-top: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
 h1 {
-    color: #333;
+    color: #ffeb3b;
 }
 
 h2 {
-    color: #007bff;
+    color: #ff9800;
+}
+
+a {
+    color: #03a9f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff5722;
 }
 
 .choices {
@@ -24,28 +39,31 @@ h2 {
 
 button {
     background: none;
-    border: none;
+    border: 2px solid white;
+    border-radius: 10px;
     cursor: pointer;
     margin: 10px;
+    padding: 10px;
+    transition: transform 0.2s, background 0.3s;
 }
 
 button img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.2s ease-in-out;
+    width: 120px;
+    height: 120px;
 }
 
-button:hover img {
+button:hover {
     transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #result {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: #333;
+    margin-top: 20px;
 }
 
 #score {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
 }
