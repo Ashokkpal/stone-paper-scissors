@@ -1,7 +1,7 @@
 ## ✨ **Rock-Paper-Scissors Game** 🪨📄✂️  
 _A fun, interactive game built with HTML, CSS, and JavaScript! Play against the computer and test your luck!_  
 
-![Game Preview]([https://images.app.goo.gl/ZsSCYcii5YkfH9aE9](https://images.app.goo.gl/hyKpRccVhCmjfbvV9))
+![Game Preview]((https://images.app.goo.gl/hyKpRccVhCmjfbvV9)
 
 ---
 
@@ -26,8 +26,7 @@ _A fun, interactive game built with HTML, CSS, and JavaScript! Play against the 
 ---
 
 ## 🚀 **Live Demo**  
-🔗 **[Play the Game Now](https://your-username.github.io/stone-paper-scissors/)**  
-_(Replace `your-username` with your actual GitHub username after enabling GitHub Pages.)_  
+🔗 **[Play the Game Now](https://ashokkpal.github.io/stone-paper-scissors/)**    
 
 ---
 
@@ -72,6 +71,3 @@ Feel free to **contribute, modify, and improve** the game! 🎯
 💬 **Have feedback or ideas?** Open an issue or submit a pull request! 🔥  
 
 ---
-
-Now your `README.md` is **eye-catching, fun, and informative**! 🚀💥  
-Let me know if you want any modifications! 😃
