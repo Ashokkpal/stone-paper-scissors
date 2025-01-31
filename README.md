@@ -1,7 +1,7 @@
 ## ✨ **Rock-Paper-Scissors Game** 🪨📄✂️  
 _A fun, interactive game built with HTML, CSS, and JavaScript! Play against the computer and test your luck!_  
 
-![Game Preview](https://images.app.goo.gl/ZsSCYcii5YkfH9aE9)
+![Game Preview]([https://images.app.goo.gl/ZsSCYcii5YkfH9aE9](https://images.app.goo.gl/hyKpRccVhCmjfbvV9))
 
 ---
 
