@@ -2,7 +2,8 @@
 _A fun, interactive game built with HTML, CSS, and JavaScript! Play against the computer and test your luck!_  
 
 ![Game Preview](https://static.thenounproject.com/png/2132017-200.png)
-
+![Game Preview](https://static.thenounproject.com/png/2141417-200.png)
+![Game Preview](https://static.thenounproject.com/png/2141451-200.png)
 ---
 
 ## 🔥 **Features**
