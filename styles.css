@@ -13,9 +13,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    width: 80%;
+    width: 90%;
+    max-width: 600px;
 }
 
+/* Profile Image */
 .profile-pic {
     width: 100px;
     height: 100px;
@@ -42,49 +44,28 @@ a:hover {
     color: #ff5722;
 }
 
+/* Game Buttons */
 .choices {
     display: flex;
     justify-content: center;
+    gap: 10px;
     margin: 20px 0;
-    flex-wrap: wrap; /* Allows wrapping of buttons if space is tight */
+    flex-wrap: wrap; /* Ensures responsiveness */
 }
 
-/* For buttons on mobile */
 button {
     background: none;
     border: 2px solid white;
     border-radius: 10px;
     cursor: pointer;
-    margin: 10px;
     padding: 10px;
     text-align: center;
     transition: transform 0.2s, background 0.3s;
 }
 
-/* To ensure buttons display as a row on mobile */
-@media (max-width: 768px) {
-    .choices {
-        justify-content: space-between; /* Align buttons in a row with space between them */
-    }
-
-    button {
-        width: 30%; /* Set a width to make sure buttons stay in one row */
-        padding: 15px; /* Increase padding for easier clicking on mobile */
-    }
-
-    button img {
-        width: 80px; /* Adjust image size for mobile */
-        height: 80px; /* Adjust image size for mobile */
-    }
-
-    button p {
-        font-size: 16px; /* Adjust font size for mobile */
-    }
-}
-
 button img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 button p {
@@ -98,10 +79,37 @@ button:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
+/* Responsive Design: Mobile Fix */
+@media (max-width: 768px) {
+    .choices {
+        justify-content: center;
+        gap: 5px; /* Reduce space for small screens */
+    }
+
+    button {
+        width: 30%; /* Ensures buttons stay in one row */
+        padding: 10px;
+    }
+
+    button img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button p {
+        font-size: 16px;
+    }
+}
+
+/* Result & Score Styling */
 #result {
     font-size: 22px;
     font-weight: bold;
     margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 #score {
